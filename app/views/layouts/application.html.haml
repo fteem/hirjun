@@ -17,5 +17,20 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    = yield
+    %nav.top-bar{ 'data-options' => "is_hover:false" }
+      %ul.title-area
+        %li.name
+          %h1
+            = link_to 'HireJuniors', '/'
+      %section.top-bar-section
+        %ul.right
+          %li= link_to "Home", '/'
+          %li.divider
+          %li= link_to "Home", '/'
+          %li.divider
+          %li= link_to "Home", '/'
+
+  %div.row
+    %div.medium-2.columns
+      = yield
     = javascript_include_tag "application"
