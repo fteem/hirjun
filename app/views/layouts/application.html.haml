@@ -26,11 +26,21 @@
         %ul.right
           %li= link_to "Home", '/'
           %li.divider
-          %li= link_to "Home", '/'
+            - if user_signed_in?
+              %li= link_to "Sign out", destroy_user_session_path, method: 'delete'
+            - else
+              %li= link_to "Sign in", new_user_session_path
           %li.divider
-          %li= link_to "Home", '/'
 
   %div.row
+    - if flash[:notice]
+      %div.alert-box.radius
+        = flash[:notice]
+        <a href="#" class="close">&times;</a>
+    - if flash[:error]
+      %div.alert-box.alert.round
+        = flash[:error]
+        <a href="#" class="close">&times;</a>
     %div.medium-2.columns
       = yield
     = javascript_include_tag "application"
