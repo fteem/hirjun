@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131018210335) do
+ActiveRecord::Schema.define(version: 20131019143709) do
+
+  create_table "job_ads", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "company"
+    t.string   "city"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

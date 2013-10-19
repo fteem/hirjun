@@ -25,6 +25,7 @@
       %section.top-bar-section
         %ul.right
           %li= link_to "Home", '/'
+          %li= link_to "Ads", job_ads_path
           %li.divider
             - if user_signed_in?
               %li= link_to "Sign out", destroy_user_session_path, method: 'delete'

@@ -1,0 +1,3 @@
+class JobAdsController < ApplicationController
+
+end
