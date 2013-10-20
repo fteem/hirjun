@@ -17,26 +17,7 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    %nav.top-bar{ 'data-options' => "is_hover:true" }
-      %ul.title-area
-        %li.name
-          %h1
-            = link_to 'HireJuniors', '/'
-      %section.top-bar-section
-        %ul.right
-          %li= link_to "Home", '/'
-          %li.divider
-          %li= link_to "Ads", job_ads_path
-          %li.divider
-          %li.has-dropdown
-            =link_to 'Account', '#'
-            %ul.dropdown
-              %li= link_to 'Profile', edit_user_registration_path
-              - if user_signed_in?
-                %li= link_to "Sign out", destroy_user_session_path, method: 'delete'
-              - else
-                %li= link_to "Sign in", new_user_session_path
-
+    =render 'shared/top_nav'
   %div.row
     - if flash[:notice]
       %div.alert-box.radius
