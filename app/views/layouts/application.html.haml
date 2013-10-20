@@ -18,15 +18,7 @@
     = csrf_meta_tags
   %body
     =render 'shared/top_nav'
-  %div.row
-    - if flash[:notice]
-      %div.alert-box.radius
-        = flash[:notice]
-        <a href="#" class="close">&times;</a>
-    - if flash[:error]
-      %div.alert-box.alert.round
-        = flash[:error]
-        <a href="#" class="close">&times;</a>
+    =render 'shared/alert_boxes'
     %div.medium-2.columns
       = yield
     = javascript_include_tag "application"

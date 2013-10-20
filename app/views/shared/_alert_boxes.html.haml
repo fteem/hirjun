@@ -1,0 +1,9 @@
+%div.row
+  - if flash[:notice]
+    %div.alert-box.radius
+      = flash[:notice]
+      <a href="#" class="close">&times;</a>
+  - if flash[:error]
+    %div.alert-box.alert.round
+      = flash[:error]
+      <a href="#" class="close">&times;</a>
