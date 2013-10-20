@@ -12,3 +12,19 @@
  *= require_tree .
  */
  *= require foundation_and_overrides
+
+@import "normalize";
+
+@import "foundation/components/global";
+
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms";
+@import "foundation/components/top-bar";
+@import "foundation/components/labels";
+@import "foundation/components/tables";
+@import "foundation/components/dropdown";
+@import "foundation/variables";
+
