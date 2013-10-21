@@ -17,7 +17,7 @@ $em-base: 16px;
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+$body-font-family: Trebuchet MS, Helvetica, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -85,8 +85,8 @@ $body-font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style"
 //
 
 // We use these to control header font styles
-$header-font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
-// $header-font-weight: bold;
+$header-font-family: Trebuchet MS, Helvetica, sans-serif;
+$header-font-weight: normal;
 // $header-font-style: normal;
 $header-font-color: #a5a5a5;
 // $header-line-height: 1.4;
@@ -979,7 +979,7 @@ $topbar-bg: #006E2E;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-$topbar-title-font-size: emCalc(22px);
+$topbar-title-font-size: emCalc(20px);
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: #fff;
@@ -988,7 +988,8 @@ $topbar-link-font-size: emCalc(16px);
 
 // Ugly shit, remove if you find the right global variable
 .top-bar-section li a:not(.button):hover {
-  background: #008C00 !important;
+  color:      #008C00 !important;
+  background: #aaa    !important;
 }
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: #008C00;
