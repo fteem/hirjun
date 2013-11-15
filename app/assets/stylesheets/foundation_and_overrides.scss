@@ -22,7 +22,7 @@ $body-font-family: Trebuchet MS, Helvetica, sans-serif;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -49,13 +49,13 @@ $body-font-family: Trebuchet MS, Helvetica, sans-serif;
 // Modular html classes
 // $include-html-grid-classes: $include-html-classes;
 // $include-html-visibility-classes: $include-html-classes;
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 // $include-html-form-classes: $include-html-classes;
 // $include-html-media-classes: $include-html-classes;
 // $include-html-section-classes: $include-html-classes;
 // $include-html-reveal-classes: $include-html-classes;
 // $include-html-alert-classes: $include-html-classes;
-// $include-html-nav-classes: $include-html-classes;
+$include-html-nav-classes: $include-html-classes;
 // $include-html-label-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 // $include-html-pricing-classes: $include-html-classes;
@@ -131,7 +131,7 @@ $header-font-color: #a5a5a5;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: darken($primary-color, 5%);
+$anchor-font-color-hover: darken($primary-color, 5%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -968,7 +968,7 @@ $panel-function-factor: 0%;
 //
 
 // Background color for the top bar
-$topbar-bg: #006E2E;
+$topbar-bg: rgba(255, 255, 255, 0.1);
 
 // Height and margin
 // $topbar-height: 45px;
@@ -982,17 +982,12 @@ $topbar-bg: #006E2E;
 $topbar-title-font-size: emCalc(20px);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #fff;
+$topbar-link-color: #333;
 $topbar-link-weight: bold;
-$topbar-link-font-size: emCalc(16px);
+$topbar-link-font-size: emCalc(20px);
 
-// Ugly shit, remove if you find the right global variable
-.top-bar-section li a:not(.button):hover {
-  color:      #008C00 !important;
-  background: #aaa    !important;
-}
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #008C00;
+// $topbar-dropdown-bg: #008C00;
 // $topbar-dropdown-link-color: #fff;
 $topbar-dropdown-toggle-size: 7px;
 // $topbar-dropdown-toggle-color: #123123;
