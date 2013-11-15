@@ -1015,4 +1015,7 @@ $topbar-menu-link-font-size: emCalc(15px);
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
+body {
+  background: url('bg.png') repeat !important;
+}
 @import 'foundation';
