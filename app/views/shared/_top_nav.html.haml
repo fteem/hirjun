@@ -1,8 +1,11 @@
 %nav.top-bar{ 'data-options' => "is_hover:true" }
   %ul.title-area
     %li.name
-      %h1
-        = link_to 'HireJuniors', '/'
+      .logo
+        = link_to '/' do
+          = image_tag 'hardhat.gif'
+          %h1.right
+            Hire Juniors
   %section.top-bar-section
     %ul.right{style: 'background-color: transparent'}
       %li.divider
