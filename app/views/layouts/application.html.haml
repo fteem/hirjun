@@ -13,11 +13,14 @@
     / Set the viewport width to device width for mobile
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Hire Juniors"
+    %link{href: "http://fonts.googleapis.com/css?family=Allerta+Stencil|Roboto+Condensed", rel: "stylesheet", type: "text/css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    =render 'shared/top_nav'
-    =render 'shared/alert_boxes'
-    = yield
+    .row
+      .large-12.columns
+        =render 'shared/top_nav'
+        =render 'shared/alert_boxes'
+        = yield
     = javascript_include_tag "application"

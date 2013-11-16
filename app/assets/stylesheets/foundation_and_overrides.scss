@@ -17,7 +17,7 @@ $em-base: 16px;
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: Trebuchet MS, Helvetica, sans-serif;
+$body-font-family: 'Roboto Condensed', sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -85,7 +85,7 @@ $include-html-nav-classes: $include-html-classes;
 //
 
 // We use these to control header font styles
-$header-font-family: Trebuchet MS, Helvetica, sans-serif;
+$header-font-family: 'Roboto Condensed', sans-serif;
 $header-font-weight: normal;
 // $header-font-style: normal;
 $header-font-color: #a5a5a5;
@@ -1010,7 +1010,4 @@ $topbar-menu-link-font-size: emCalc(15px);
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
-body {
-  background: url('bg.png') repeat !important;
-}
 @import 'foundation';
