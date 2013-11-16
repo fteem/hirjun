@@ -10,6 +10,7 @@ nav.top-bar {
   img {
     width: 75px;
     height: 75px;
+    margin-top:10px;
   }
   h1 {
     line-height: 75px !important;
@@ -19,7 +20,7 @@ nav.top-bar {
   }
 
   #headline {
-    margin-top: -30px;
+    margin-top: -40px;
     margin-right: -35px;
     font-size: 14px;
   }
@@ -37,3 +38,14 @@ nav.top-bar {
   }
 }
 
+form {
+  label {
+    display: inline-block;
+  }
+  input[type='submit'] {
+    padding: 10px !important;
+  }
+  input[type='text'], input[type='email'], input[type='password'] {
+    border-radius: 3px;
+  }
+}
