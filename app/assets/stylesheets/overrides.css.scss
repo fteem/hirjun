@@ -1,7 +1,3 @@
-body {
-  background: url('bg.png') repeat !important;
-}
-
 nav.top-bar {
   h1 {
     font-family: 'Allerta Stencil', sans-serif;
@@ -20,6 +16,12 @@ nav.top-bar {
     font-size: 28px !important;
     color: black;
     font-weight: bold;
+  }
+
+  #headline {
+    margin-top: -30px;
+    margin-right: -35px;
+    font-size: 14px;
   }
 }
 
