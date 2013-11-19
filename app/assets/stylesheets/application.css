@@ -27,6 +27,3 @@
 @import "foundation/components/tables";
 @import "foundation/components/dropdown";
 @import "foundation/variables";
-
-@import 'overrides';
-
