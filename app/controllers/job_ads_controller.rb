@@ -51,7 +51,9 @@ class JobAdsController < ApplicationController
 
   private
   def job_ad_params
-    params.require(:job_ad).permit(:name, :description, :company, :city, :country)
+    params.require(:job_ad).permit(:title, :description, :remote_work, :expires_on,
+                                   :requirements, :company_name, :company_url,
+                                   :location, :additional_info, :how_to_apply)
   end
 
 end
