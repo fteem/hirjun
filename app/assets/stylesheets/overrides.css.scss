@@ -63,3 +63,38 @@ form {
     min-height: 150px !important;
   }
 }
+
+.job {
+  font-size: 16px;
+  background: rgba(0,0,0,0.1);
+  border-bottom: 1px solid #aaa;
+  height: 40px;
+  padding: 7px 10px 0 10px;
+  h3 {
+    a{
+      color: #333;
+    }
+  }
+}
+
+.job-list {
+  .company-name, .job-title, .location {
+    display: block;
+    float:left;
+    min-width: 150px;
+  }
+  .company-name {
+    font-style: oblique;
+  }
+  .job-title {
+    a {
+      color: #B02B2C;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: rgba(176,43,44, 0.8);
+    }
+  }
+  .location {}
+}
+

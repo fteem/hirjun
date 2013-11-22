@@ -1,3 +1,19 @@
-.row
-  .large-4.columns
-    Ile
+.large-4.columns
+  .row
+    %ul.inline-list
+      %li
+        %h1 Newest jobs
+      %li
+        = link_to "Post a job!", new_job_ad_path
+
+  - @job_ads.each do |job|
+    .row.job
+      %ul.inline-list.job-list
+        %li.company-name
+          = job.company_name
+        %li.job-title
+          = link_to job.title, job_ad_path(job.id)
+        %li.location
+          = "Location: #{job.location}"
+        %li.right
+          = link_to "Read more", job_ad_path(job.id)
