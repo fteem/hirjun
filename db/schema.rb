@@ -14,11 +14,16 @@
 ActiveRecord::Schema.define(version: 20131019143709) do
 
   create_table "job_ads", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "description"
-    t.string   "company"
-    t.string   "city"
-    t.string   "country"
+    t.string   "company_name"
+    t.string   "company_url"
+    t.string   "location"
+    t.boolean  "remote_work"
+    t.text     "additional_info"
+    t.text     "requirements"
+    t.text     "how_to_apply"
+    t.date     "expires_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,22 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require foundation_and_overrides
  *= require_self
  *= require_tree .
  */
- *= require foundation_and_overrides
-
-@import "normalize";
-
-@import "foundation/components/global";
-
-@import "foundation/components/grid";
-@import "foundation/components/visibility";
-@import "foundation/components/type";
-@import "foundation/components/buttons";
-@import "foundation/components/forms";
-@import "foundation/components/top-bar";
-@import "foundation/components/labels";
-@import "foundation/components/tables";
-@import "foundation/components/dropdown";
-@import "foundation/variables";

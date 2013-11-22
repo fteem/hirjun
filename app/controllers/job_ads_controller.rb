@@ -1,5 +1,5 @@
 class JobAdsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show, :new]
 
   def index
     @job_ads = JobAd.order(created_at: :desc)

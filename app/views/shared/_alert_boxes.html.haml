@@ -1,6 +1,8 @@
-#flash_messages.row
+.row
   .large-12.columns
-    - flash.each do |key, value|
-      %div.close{class: key, "data-alert" => true}
-        = value
-        %a.close &times;
+    #flash_messages.row
+      .large-12.columns
+        - flash.each do |key, value|
+          %div.close{class: key, "data-alert" => true}
+            = value
+            %a.close &times;

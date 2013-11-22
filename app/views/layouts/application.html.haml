@@ -18,9 +18,7 @@
     -# = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    .row
-      .large-12.columns
-        =render 'shared/top_nav'
-        =render 'shared/alert_boxes'
-        = yield
+    =render 'shared/top_nav'
+    =render 'shared/alert_boxes'
+    = yield
     = javascript_include_tag "application"

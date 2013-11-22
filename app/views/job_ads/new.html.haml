@@ -1,0 +1,50 @@
+.row
+  .large-12.columns
+    %h3 Hey there!
+
+    %p
+      Please, fill in the form below!
+
+.row
+  = form_for @job_ad do |f|
+    .large-12.columns
+      .row
+        .small-4.large-6.columns
+          = f.label 'Job title'
+          = f.text_field :title, placeholder: "Junior web developer wanted..."
+
+          = f.label "Job description"
+          = f.text_area :description,  rows: 20, cols: 20, placeholder: "The candidate would be working in a remote team..."
+
+          = f.label "Do you accept remote work?"
+          = f.check_box :remote_work
+
+          %br
+          %br
+
+          = f.label :requirements
+          = f.text_area :requirements, placeholder: "Basics in programming and relational databases..."
+
+        .small-4.large-6.columns
+          = f.label :company_name
+          = f.text_field :company_name, placeholder: "Example Co."
+
+          = f.label :company_url
+          = f.text_field :company_url, placeholder: "http://example.com"
+
+          = f.label :location
+          = f.text_field :location, placeholder: "San Francisco, California"
+
+          = f.label :additional_info
+          = f.text_area :additional_info, placeholder: "Please only serious candidates and no recruiters..."
+
+          = f.label :how_to_apply
+          = f.text_field :how_to_apply, placeholder: "Send an email to hr@example.com"
+
+      .row
+        .small-4.large-6.columns
+          = f.label "Job ad expires on:"
+          = f.date_select :expires_on
+
+        .small-4.large-6.columns
+          = f.submit "Publish job"

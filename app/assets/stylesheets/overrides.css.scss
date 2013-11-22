@@ -4,36 +4,42 @@ body {
 }
 
 nav.top-bar {
+  margin-bottom: 70px;
   h1 {
     font-family: 'Allerta Stencil', sans-serif;
   }
 }
 
 .logo {
+  display: inline-block;
   margin: 10px 0 0 25px;
   width: 270px;
   img {
-    width: 75px;
     height: 75px;
     margin-top:10px;
+    width: 75px;
   }
   h1 {
-    line-height: 75px !important;
-    font-size: 28px !important;
     color: black;
+    font-size: 28px !important;
     font-weight: bold;
+    line-height: 75px !important;
   }
 
   #headline {
-    margin-top: -40px;
-    margin-right: -35px;
+    color: #333;
     font-size: 14px;
+    margin-right: -35px;
+    margin-top: -40px;
   }
 }
 
 .top-bar-section {
   ul {
     margin-top: 25px;
+    ul.dropdown {
+      margin: 0 auto;
+    }
     li {
       a:hover {
         background: transparent !important;
@@ -52,5 +58,8 @@ form {
   }
   input[type='text'], input[type='email'], input[type='password'] {
     border-radius: 3px;
+  }
+  textarea {
+    min-height: 150px !important;
   }
 }

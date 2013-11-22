@@ -20,6 +20,8 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 
 group :test, :development do
