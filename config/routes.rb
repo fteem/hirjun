@@ -3,5 +3,5 @@ Hirejuniors::Application.routes.draw do
 
   devise_for :users
 
-  root 'hello#index'
+  root 'job_ads#index'
 end
