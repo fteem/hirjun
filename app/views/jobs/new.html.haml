@@ -1,12 +1,11 @@
 .row
   .large-12.columns
     %h3 Hey there!
-
     %p
-      Please, fill in the form below!
+      Thanks for deciding to give a junior a chance! Let's create this job ad!
 
 .row
-  = form_for @job_ad do |f|
+  = form_for @job do |f|
     .large-12.columns
       .row
         .small-4.large-6.columns
@@ -18,12 +17,6 @@
 
           = f.label "Do you accept remote work?"
           = f.check_box :remote_work
-
-          %br
-          %br
-
-          = f.label :requirements
-          = f.text_area :requirements, placeholder: "Basics in programming and relational databases..."
 
         .small-4.large-6.columns
           = f.label :company_name
@@ -43,7 +36,7 @@
 
       .row
         .small-4.large-6.columns
-          = f.label "Job ad expires on:"
+          = f.label "Job expires on:"
           = f.date_select :expires_on
 
         .small-4.large-6.columns

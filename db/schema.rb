@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131019143709) do
 
-  create_table "job_ads", force: true do |t|
+  create_table "jobs", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.string   "company_name"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20131019143709) do
     t.string   "location"
     t.boolean  "remote_work"
     t.text     "additional_info"
-    t.text     "requirements"
     t.text     "how_to_apply"
     t.date     "expires_on"
     t.datetime "created_at"

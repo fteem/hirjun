@@ -1,6 +1,6 @@
-class CreateJobAds < ActiveRecord::Migration
+class CreateJobs < ActiveRecord::Migration
   def change
-    create_table :job_ads do |t|
+    create_table :jobs do |t|
       t.string :title
       t.text :description
       t.string :company_name
@@ -8,7 +8,6 @@ class CreateJobAds < ActiveRecord::Migration
       t.string :location
       t.boolean :remote_work
       t.text :additional_info
-      t.text :requirements
       t.text :how_to_apply
       t.date :expires_on
 

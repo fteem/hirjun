@@ -4,16 +4,16 @@
       %li
         %h1 Newest jobs
       %li
-        = link_to "Post a job!", new_job_ad_path
+        = link_to "Post a job!", new_job_path
 
-  - @job_ads.each do |job|
+  - @jobs.each do |job|
     .row.job
       %ul.inline-list.job-list
         %li.company-name
           = job.company_name
         %li.job-title
-          = link_to job.title, job_ad_path(job.id)
+          = link_to job.title, job_path(job.id)
         %li.location
           = "Location: #{job.location}"
         %li.right
-          = link_to "Read more", job_ad_path(job.id)
+          = link_to "Read more", job_path(job.id)
