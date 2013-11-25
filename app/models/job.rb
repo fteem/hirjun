@@ -7,5 +7,4 @@ class Job < ActiveRecord::Base
   validates :company_url, presence: true
   validates :location, presence: true
   validates :how_to_apply, presence: true
-  validates :expires_on, presence: true
 end

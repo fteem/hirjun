@@ -9,7 +9,6 @@ class CreateJobs < ActiveRecord::Migration
       t.boolean :remote_work
       t.text :additional_info
       t.text :how_to_apply
-      t.date :expires_on
 
       t.timestamps
     end

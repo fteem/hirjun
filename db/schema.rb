@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20131019143709) do
     t.boolean  "remote_work"
     t.text     "additional_info"
     t.text     "how_to_apply"
-    t.date     "expires_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
