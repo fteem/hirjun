@@ -1,10 +1,21 @@
 .large-4.columns
   .row
+    %p.copytext
+      = link_to "HireJuniors", root_path
+      is a place where every fresh and aspiring website builder can find his/her first job.
+      As an employer, you can be sure that your job ad will get to the right people - the ones that are looking for a start in the wonderful world of
+      web development.
+      %br
+      And if you are having a second thought on employing a junior, remember, you were a junior once and someone gave you the chance!
+      %br
+      Thank you for being here!
+
+  .row
     %ul.inline-list
       %li
         %h1 Newest jobs
       %li
-        = link_to "Post a job!", new_job_path
+        = link_to "Post a job!", new_job_path, id: 'new_job_button'
 
   - @jobs.each do |job|
     .row.job
