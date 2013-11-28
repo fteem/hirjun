@@ -16,24 +16,19 @@
         %br
         = link_to @job.company_url, @job.company_url
 
-      %p#job_description
+      %p
         = @job.description
 
-      Remote?
-      = @job.remote_work
 
-    .small-4.large-6.columns
-      Company name
-      = @job.company_name
+    .large-12.columns
+      %p
+        = remote_work(@job.remote_work)
 
-      Company URL
-      = link_to @job.company_url, @job.company_url
+      %p
+        - unless @job.additional_info.blank?
+          Additional info
+          = @job.additional_info
 
-      Location
-      = @job.location
-
-      Additional info
-      = @job.additional_info
-
-      Want to apply for this job?
-      = @job.how_to_apply
+      %p#apply
+        Want to apply for this job?
+        = @job.how_to_apply
