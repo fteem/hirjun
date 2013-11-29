@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe JobsController do
-  login_user
-
   describe "GET 'index'" do
     it 'should load all jobs ads in descending order' do
       job1 = FactoryGirl.create :job

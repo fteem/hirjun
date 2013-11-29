@@ -6,5 +6,6 @@ FactoryGirl.define  do
     company_url "http://example.com"
     location "Skopje, Macedonia"
     how_to_apply "Blah blah blah"
+    author_email 'john@doe.com'
   end
 end

@@ -8,5 +8,6 @@ describe Job do
     it { should validate_presence_of(:company_name) }
     it { should validate_presence_of(:company_url) }
     it { should validate_presence_of(:location) }
+    it { should validate_presence_of(:author_email) }
   end
 end

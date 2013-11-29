@@ -1,6 +1,4 @@
 class JobsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show, :new]
-
   def index
     @jobs = Job.order(created_at: :desc)
   end
@@ -52,7 +50,7 @@ class JobsController < ApplicationController
   private
   def job_params
     params.require(:job).permit(:title, :description, :remote_work, :company_name,
-                                :company_url, :location, :additional_info, :how_to_apply)
+                                :company_url, :location, :additional_info, :how_to_apply, :author_email)
   end
 
 end
