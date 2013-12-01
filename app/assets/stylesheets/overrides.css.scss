@@ -1,6 +1,5 @@
 body {
   background: url('bg.png') repeat;
-
 }
 
 nav.top-bar {
@@ -36,7 +35,11 @@ nav.top-bar {
 
 .top-bar-section {
   ul {
+    background: transparent !important;
     margin-top: 25px;
+    a {
+      color: #B02B2C !important;
+    }
     ul.dropdown {
       margin: 0 auto;
     }
@@ -108,7 +111,8 @@ form {
 }
 
 ul.job-list {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   li.company-name, li.job-title, li.location {
     display: block;
     float:left;
@@ -160,9 +164,9 @@ ul.job-list {
 }
 
 .copytext {
-  border-bottom: 1px solid #aaa;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5rem;
+  border-bottom: 1px solid #aaa;
   margin-bottom: 30px;
   margin-top: 35px;
   padding-bottom: 15px;

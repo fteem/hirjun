@@ -7,5 +7,6 @@ FactoryGirl.define  do
     location "Skopje, Macedonia"
     how_to_apply "Blah blah blah"
     author_email 'john@doe.com'
+    confirmed true
   end
 end

@@ -1,10 +1,10 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.order(created_at: :desc)
+    @jobs = Job.confirmed.order(created_at: :desc)
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = Job.confirmed.find(params[:id])
   end
 
   def new
@@ -44,6 +44,17 @@ class JobsController < ApplicationController
     else
       flash[:error] = 'An error occured, please try again'
       redirect_to @job
+    end
+  end
+
+  def confirm
+    @job = Job.unconfirmed(params[:token])
+    if @job.update_attributes(confirmed: true)
+      flash[:notice] = "Your job listing has been confirmed. Thank you!"
+      redirect_to @job
+    else
+      flash[:error] = "Your job listing cannot be confirmed, please double check the link and try again!"
+      redirect_to root_url
     end
   end
 

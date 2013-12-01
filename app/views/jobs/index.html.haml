@@ -2,13 +2,13 @@
   .row
     %p.copytext
       = link_to "HireJuniors", root_path
-      is a place where every fresh and aspiring website builder can find his/her first job.
-      As an employer, you can be sure that your job ad will get to the right people - the ones that are looking for a start in the wonderful world of
-      web development.
+      is a job board where employers can look for junior web builders, post their job listing and find the perfect candidate.
+      Posting a job listing on
+      = link_to "HireJuniors", root_path
+      is, and always will be, free of charge.
       %br
-      And if you are having a second thought on employing a junior, remember, you were a junior once and someone gave you the chance!
       %br
-      Thank you for being here!
+      Thank you for considering to give a junior a chance!
 
   .row
     %ul.inline-list
@@ -20,11 +20,7 @@
   - @jobs.each do |job|
     .row.job
       %ul.inline-list.job-list
-        %li.company-name
-          = job.company_name
         %li.job-title
           = link_to job.title, job_path(job.id)
-        %li.location
-          = "Location: #{job.location}"
         %li.right
-          = link_to "Read more", job_path(job.id)
+          = job.created_at.to_date.to_formatted_s(:short)

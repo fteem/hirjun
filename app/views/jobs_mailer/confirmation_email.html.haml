@@ -1,0 +1,29 @@
+Hello,
+%br
+%br
+thank you for posting a job listing on
+= link_to "HireJuniors", root_path
+%br
+%br
+%br
+
+If you haven't posted this job on our site, you can ignore this email. Sorry for any troubles caused!
+%br
+%br
+
+If you posted a job listing with the name:
+%br
+%h4
+  = @job.title
+%br
+please, confirm this by clicking on the link below.
+%br
+%br
+%br
+
+= link_to "Confirm you job!", confirm_job_url(@job.confirmation_token), target: '_blank'
+
+%br
+%br
+
+Thank you!

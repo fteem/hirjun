@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe JobsController do
   describe "GET 'index'" do
-    it 'should load all jobs ads in descending order' do
-      job1 = FactoryGirl.create :job
-      job2 = FactoryGirl.create :job
+    it 'loads confirmed jobs ads in descending order' do
+      job1 = FactoryGirl.create :job, confirmed: true
+      job2 = FactoryGirl.create :job, confirmed: false
+      job3 = FactoryGirl.create :job, confirmed: true
       get :index
       expect(response).to be_success
-      expect(assigns(:jobs)).to match_array [job1, job2]
+      expect(assigns(:jobs)).to match_array [job1, job3]
     end
 
     it 'renders jobs/index template' do
@@ -18,7 +19,7 @@ describe JobsController do
 
   describe "GET 'show'" do
     before :each do
-      @job = FactoryGirl.create :job
+      @job = FactoryGirl.create :job, confirmed: true
     end
 
     it 'should find and show a job' do
