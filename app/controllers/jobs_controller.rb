@@ -14,8 +14,8 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
-      flash[:notice] = 'Your job ad was created!'
-      redirect_to @job
+      flash[:notice] = 'Your job was created. Please check your inbox for the confirmation email!'
+      redirect_to root_url
     else
       render :new
     end
@@ -48,8 +48,8 @@ class JobsController < ApplicationController
   end
 
   def confirm
-    @job = Job.unconfirmed(params[:token])
-    if @job.update_attributes(confirmed: true)
+    @job = Job.unconfirmed.find_by_confirmation_token(params[:token])
+    if @job.update_attributes({confirmed: true})
       flash[:notice] = "Your job listing has been confirmed. Thank you!"
       redirect_to @job
     else

@@ -21,6 +21,9 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'email_spec'
+  gem 'capybara-email'
+  gem 'database_cleaner'
 end
 
 group :test, :development do
