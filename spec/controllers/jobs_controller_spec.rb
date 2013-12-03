@@ -116,4 +116,20 @@ describe JobsController do
     end
 
   end
+
+  describe "GET 'confirm'" do
+    before :each do
+      @job = FactoryGirl.create :job
+    end
+
+    it 'confirms a job listing' do
+      Job.should_receive(:unconfirmed).and_return unconfirmed_jobs = double
+      unconfirmed_jobs.should_receive(
+        :find_by_confirmation_token).with(
+        @job.confirmation_token).and_return @job
+
+      get :confirm, token: @job.confirmation_token
+      expect(response).to be_redirect
+    end
+  end
 end
