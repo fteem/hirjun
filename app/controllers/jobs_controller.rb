@@ -58,6 +58,15 @@ class JobsController < ApplicationController
     end
   end
 
+  def remove_listing
+    if Job.where(confirmation_token: params[:token]).destroy_all
+      flash[:notice] = 'Your job listing has been deleted!'
+    else
+      flash[:error] = "The job listing cannot be deleted."
+    end
+    redirect_to root_url
+  end
+
   private
   def job_params
     params.require(:job).permit(:title, :description, :remote_work, :company_name,

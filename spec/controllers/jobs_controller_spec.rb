@@ -132,4 +132,21 @@ describe JobsController do
       expect(response).to be_redirect
     end
   end
+
+  describe "GET 'remove_listing'" do
+    before :each do
+      @job = FactoryGirl.create :job
+    end
+
+    it 'deletes a job listing' do
+      Job.should_receive(:where).with(confirmation_token: @job.confirmation_token).and_return @job
+      @job.should_receive(:destroy_all).and_return true
+
+      expect {
+        get :remove_listing, token: @job.confirmation_token
+      }.to change(Job, :count).by(-1)
+
+      expect(response).to be_redirect
+    end
+  end
 end

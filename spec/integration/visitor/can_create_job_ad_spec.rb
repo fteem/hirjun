@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "Visitor" do
-  it 'can create a job listing and get confirmation email' do
+  it 'can create a job listing and get confirmation email', js: true do
     @job_title = "JUNIOR WEB DEVELOPER WANTED!"
 
     visit root_path

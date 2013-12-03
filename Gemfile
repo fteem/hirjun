@@ -24,6 +24,7 @@ group :test do
   gem 'email_spec'
   gem 'capybara-email'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 group :test, :development do
