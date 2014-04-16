@@ -12,6 +12,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'newrelic_rpm'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'html2haml'
   gem 'quiet_assets'
